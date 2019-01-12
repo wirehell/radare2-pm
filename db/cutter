@@ -8,7 +8,7 @@ R2PM_INSTALL() {
 	cd src || exit 1
 	if qmake --version 2>&1 ; then
 		export PATH="$QT_PATH:$PATH"
-		qmake -makefile cutter.pro || exit 1
+		qmake -makefile Cutter.pro || exit 1
 	elif cmake --version 2>&1 ; then
 		cmake .. -DCMAKE_PREFIX_PATH="$QT_PATH"
 	fi
